@@ -1,0 +1,83 @@
+#[READ FIRST]
+# This config file requires you to enter the paths to your different tools and files. It is necessary that every tool is installed and path is provided.
+#
+#---------------------------------------------- DOWNLOAD LINKS TO TOOLS -------------------------------------------------------------------
+# 
+# If the required tool is not installed, please select which you would like to install and UNCOMMENT as appropriate
+#
+#            Path to save your tools: [Change if you wish to download the tools]
+                                          toolPATH="/home/dami/Music/Amazo"
+#*****************************************************************************************************************************************************************
+#            SAMTOOLS: This version of Samtools is an old version however, the 'CopyCat' package has been optimised for this version. It is thought
+#                        that any newer versions of samtools will still be compatible however, it is not guaranteed.
+# 
+#                              Change to Yes or No
+                                                      downloadSAMTOOLS="yes"
+                                                # DO NOT CHANGE                            
+                             samLINK="https://sourceforge.net/projects/samtools/files/samtools/0.1.19/samtools-0.1.19.tar.bz2"
+#*****************************************************************************************************************************************************************
+#            Control FREE-C:   Control Free-C is required to carry out the copy number variation calculations. The releases page is also added here
+#                                  as there are constant updates to the package. PLEASE NOTE: Version 10.6 is optimised for 'CopyCat'.
+#
+#                        Change to Yes or No
+                                              downloadFREEC="y"
+                                                # DO NOT CHANGE            
+                       freeLINK="https://github.com/BoevaLab/FREEC/archive/v10.6.zip"
+#*****************************************************************************************************************************************************************
+#            Delly:  Delly allows the discovery and visualisation of deletions and duplications. Carrys out the calculation of coverage based on a sliding window. PLEASE NOTE: Version 0.7.7 is optimised for 'CopyCat'.
+#
+#                        Change to Yes or No
+                                             downloadDELLY="y"
+                                                # DO NOT CHANGE                
+                        dellyLINK="git clone --recursive https://github.com/dellytools/delly.git"
+#*****************************************************************************************************************************************************************
+#            BWA:    The Burns-Wheeler Aligner is required to carry ouy the alignment of the desired sample genome against the reference genome. 'Copycat' uses Version 0.7.12
+#
+#                        Change to Yes or No
+                                                   downloadBWA="yes"
+                                                # DO NOT CHANGE    
+                        bwaLINK="https://sourceforge.net/projects/bio-bwa/files/bwa-0.7.12.tar.bz2"
+#*****************************************************************************************************************************************************************   
+#----------------------------------------------------------- INPUT PATHS -------------------------------------------------------------------------
+
+#[Enter the path 'CopyCat' package]
+copyCat="/home/dami/CopyCat"
+
+#[Enter the path to your reference genome]
+RPATH="/home/dami/Documents/BWA_Index/Pfalciparum.genome.fasta"
+
+#[Enter the path to where you want your downloaded genome to be saved]
+DPATH="/home/dami/Desktop/Test"
+
+#[Enter the path to your bwa executable]
+bwaPATH="bwa"
+
+#[Enter the path to your samtools executable]
+SAMTOOLS="/home/dami/Documents/samtools-0.1.19/samtools"
+
+#[Enter the path
+#lenFILE="/home/dami/Pf.fasta.len"
+
+#[Enter the path to your Control FreeC executable]
+FPATH="/home/dami/Documents/Tools/FREEC-10.6/freec"
+
+#[Enter the path to your bedtools executable]
+BEDPATH="/home/dami/Documents/Tools/bedtools2-master/bin/bedtools"
+
+#[Enter the path to the delly source folder. It is recommended to leave the '/src' unchanged]
+dPATH="/home/dami/Documents/Tools/delly/src"
+
+#[Enter the path to your list of samples if you wish to download them. DO NOT CHANGE if files are already downloaded]
+csvFile="/home/dami/finalTester.csv"
+
+#[Enter the chromosome your desired gene is on. It is advised to enter this as written in the genome file]
+chrDes="Pf3D7_12_v3"
+
+#[Enter the start position for your desired gene]
+startPos="46788"
+
+#[Enter the stop position for your desired gene]
+stopPos="56805"
+
+
+configFile="${copyCat}/misc/configTemplate.txt"
