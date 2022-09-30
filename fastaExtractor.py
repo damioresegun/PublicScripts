@@ -1,9 +1,10 @@
+#!/usr/bin/env python3
 # Execute by: python fastaExtractor.py readsTxtFile Fastafile outputFastaFile
 
 from Bio import SeqIO
 import sys
 
-readsList = open(sys.argv[1], 'rU')
+readsList = open(sys.argv[1], 'r')
 fastafile = sys.argv[2]
 outputfile = open(sys.argv[3], 'w')
 
