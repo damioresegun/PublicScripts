@@ -4,15 +4,6 @@
 #
 # Author: Damilola R Oresegun
 # Adapted from: https://github.com/peterthorpe5/public_scripts/blob/master/generate_ITS1_database/bin/generate_database_direct_download.py
-""" import os
-from sys import stdin,argv
-from Bio.Seq import Seq
-from Bio.SeqRecord import SeqRecord
-from Bio import SeqIO
-import sys
-from optparse import OptionParser
-from Bio import Entrez, SeqIO
-import re """
 from Bio import SeqIO
 from optparse import OptionParser
 from Bio import Entrez, SeqIO
@@ -32,7 +23,7 @@ def download_accessions(accessions):
 
 
 usage = """Use as follows:
-$ DownloadedFastaAcc.py -t tabfile.txt -o out.fasta
+$ Downloaded_NCBI_Accession_to_Fasta.py -t tabfile.txt -o out.fasta
 """
 # set the input options to look for
 parser = OptionParser(usage=usage)
